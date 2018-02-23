@@ -1,0 +1,125 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+
+
+//下来框样式修改s
+.short-table{
+  @include ss((mb 0) ());
+  &.table-lg {
+    &>thead {
+      &>tr{
+        &>th {
+          @include ss((bdw 1) (p 1rem 1.24rem));
+        }
+      }
+    }
+    &>tbody {
+      &>tr{
+        &>td {
+          @include ss(()(p 1rem 1.24rem));
+        }
+      }
+    }
+  }
+  &.table-striped tbody tr:nth-of-type(odd){
+    background-color: rgba(0,0,0,0.02);
+  }
+  &.table-hover tbody tr:hover {
+    background-color: rgba(240,252,255,0.8);
+  }
+  &.table-sm {
+    &>thead {
+      &>tr{
+        &>th {
+          @include ss((bdw 1) (p 0.28rem 0.28rem));
+        }
+      }
+    }
+    &>tbody {
+      &>tr{
+        &>td {
+          @include ss(()(p 0.28rem 0.28rem));
+        }
+      }
+    }
+  }
+  &.table-bd {
+    @include ss(() (bd));
+  }
+  &.table-bdtb {
+    @include ss(() (bdt 1) (bdb 1));
+  }
+  &>thead {
+    &>tr{
+      &>th {
+        @include ss((bdw 1) (p 0.5rem 0.75rem));
+      }
+    }
+  }
+  &>tbody {
+    &>tr{
+      &>td {
+        @include ss(()(p 0.5rem 0.75rem));
+      }
+      &:last-child {
+        &>td {
+          @include ss(()(bdb #E9ECEF));
+        }
+      }
+    }
+  }
+  & .px {
+    @include ss((por) (cup)(p 6 8));
+    &:before {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      vertical-align: 0;
+      margin-top: 0.8em;
+      position: absolute;
+      left: 0.3em;
+      content: "";
+      border-top: .3em solid;
+      border-right: .3em solid transparent;
+      border-left: .3em solid transparent;
+    }
+    &:after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-top: 0.4em;
+      position: absolute;
+      left: 0.3em;
+      vertical-align: .3em;
+      content: "";
+      border-bottom: .3em solid;
+      border-right: .3em solid transparent;
+      border-left: .3em solid transparent;
+    }
+    &.px-s {
+      &:after {
+        margin-top: 0.6em;
+        z-index: 1;
+      }
+      &:before {
+        margin-top: 0.4em;
+        color: #ffffff;
+      }
+    }
+    &.px-x {
+      &:before {
+        margin-top: 0.8em;
+        z-index: 1;
+      }
+      &:after {
+        margin-top: 0.4em;
+        color: #ffffff;
+      }
+    }
+  }
+}

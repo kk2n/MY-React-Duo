@@ -1,0 +1,24 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+//alert样式修改
+//按钮样式修改
+
+.short-cas {
+  & .ant-input {
+    @include ss((bdrs 0)(lhh 34)(fz 14));
+  }
+}
+.ant-cascader-menu-item{
+  @include ss(() (fz 14));
+}
+.ant-cascader-picker-label{
+  font-size: 14px;
+}
+.ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled), .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover{
+  font-weight: 400;
+}

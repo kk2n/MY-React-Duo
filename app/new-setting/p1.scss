@@ -1,0 +1,52 @@
+@import "../comm-scss/short-sass/sscss-set";
+@import "../comm-scss/short-sass/sscss-mixin";
+@import "../comm-scss/bootstarp4/functions";
+@import "../comm-scss/bootstarp4/variables";
+@import "../comm-scss/bootstarp4/mixins";
+$path:'/common/img/';
+.con-main {
+  @include ss(() (p 20));
+}
+.filter-dd{
+  @include ss(() (lh 34px));
+  &::after {
+    @include ss((con '') (db) (cb));
+  }
+}
+.sel-dd{
+  @include ss(() (p 10 10 10 20)(bd d #E9ECEF)(mt 16)(lh 35px));
+  &::after {
+    @include ss((con '') (db) (cb));
+  }
+}
+.layui-layer-title{
+  @include ss(() (bgc #2E8DED)(c #fff));
+}
+
+.layui-layer-btn .layui-layer-btn0{
+  color: #ffffff!important;
+  line-height: 32px;
+  height: 34px;
+}
+.layui-layer-btn .layui-layer-btn1{
+  line-height: 32px;
+  height: 34px;
+}
+.add-banji{
+  @include ss(() (lh 34px));
+  & .red {
+    @include ss((c #f00) ());
+  }
+}
+.tishi{
+  @include ss(() (fz 18)(lhh 42));
+}
+.moban{
+  @include ss(() (fz 14));
+  & a {
+    @include ss((fz 14) ());
+  }
+}
+.short-label .short-check+label{
+  top:0.75rem
+}

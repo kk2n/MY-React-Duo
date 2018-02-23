@@ -1,0 +1,126 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+//alert样式修改
+//按钮样式修改
+
+.short-btn {
+  &.btn{
+    vertical-align: inherit;
+    @include ss(() (bgc #fff)(c $blue)(bdrs 0)(h auto)(lh 1.25)(fz 1rem)(p .536rem .70rem))
+  }
+  &.btn-disabled {
+    @include ss((bd #f0f0f0) (c rgba(0, 0, 0, .25)) (bgc #f7f7f7) (op 1));
+    cursor: not-allowed;
+    &:hover {
+      @include ss((bd #f0f0f0)(bgc #f7f7f7));
+    }
+  }
+}
+
+.btn-primary {
+  &.btn {
+    @include ss(()  (bd $blue)(c $blue));
+  }
+  &.btn-fill {
+    @include ss((c #fff) (bgc $blue));
+    &:hover {
+      @include ss((bgc darken($blue, 10%)) (bd darken($blue, 10%)));
+    }
+  }
+  &:hover {
+    @include ss((bgc $blue) (bd $blue));
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($blue, .2);
+  }
+}
+
+.btn-success {
+  &.btn {
+    @include ss(()  (bd $green)(c $green));
+  }
+  &.btn-fill {
+    @include ss((c #fff) (bgc $green));
+    &:hover {
+      @include ss((bgc $green) (bd $green));
+    }
+  }
+  &:hover {
+    @include ss((bgc $green) (bd $green));
+  }
+}
+
+.btn-warning {
+  &.btn {
+    @include ss(()  (bd $yellow)(c $yellow));
+  }
+  &.btn-fill {
+    @include ss((c #fff) (bgc $yellow));
+    &:hover {
+      @include ss((bgc darken($yellow, 10%)) (bd darken($yellow, 10%)));
+    }
+  }
+  &:hover {
+    @include ss((bgc $yellow) (bd $yellow) (c #fff));
+  }
+}
+
+.btn-danger {
+  &.btn {
+    @include ss(()  (bd $red)(c $red));
+  }
+  &.btn-fill {
+    @include ss((c #fff) (bgc $red));
+    &:hover {
+      @include ss((bgc darken($red, 10%)) (bd darken($red, 10%)));
+    }
+  }
+  &:hover {
+    @include ss((bgc $red) (bd $red));
+  }
+}
+
+.btn-gray {
+  @include ss((c $gray-500) (bd #ddd));
+  &.btn {
+    @include ss(()  (bd #ddd)(c $gray-500));
+  }
+  &.btn-fill {
+    @include ss(() (bgc #f5f5f5));
+    &:hover {
+      @include ss((bgc #f1f1f1) (bd #ddd));
+    }
+  }
+  &:hover {
+    @include ss((bgc #f1f1f1) (bd #ddd));
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(219, 219, 219, .5);
+  }
+}
+
+.btn-dark {
+  &.btn {
+    @include ss(()  (bd $gray-900)(c $gray-900));
+  }
+  &.btn-fill {
+    @include ss((c #fff) (bgc $gray-900));
+    &:hover {
+      @include ss((bgc $black) (c #fff));
+    }
+  }
+  &:hover {
+    @include ss((bgc $gray-900) (c #fff));
+  }
+}
+.btn-sm{
+  @include ss(() (fz 80%)(lh 1.15rem)(p .215rem .5rem .280rem));
+}
+.btn-lg{
+  @include ss(() (fz 1.20rem)(lh 1.55));
+}

@@ -1,0 +1,154 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+//input组件
+.short-input {
+  outline: none;
+  & input{
+    @include ss((h auto)(lh 1.25)(p .536rem .70rem) (bd #ddd)(bdrs 0)(fz 1rem)(fw 400)(c #333));
+  }
+  &.short-input-sm {
+    & input{
+      @include ss((fz 80%) (p 0.25rem 0.35rem));
+    }
+  }
+  &.short-input-lg {
+    & input{
+      @include ss((fz 120%) (p 0.929rem 0.70rem));
+    }
+  }
+  &.short-input-disabled {
+    & input {
+      @include ss(() (c #999));
+      cursor: not-allowed;
+    }
+  }
+
+}
+.ant-input-group-addon {
+  @include ss(() (bdrs 0));
+}
+textarea.short-input{
+  @include ss((bdrs 0) (fz 14));
+}
+.short-input-primary{
+  & input{
+    @include ss((bd $blue)(c $blue));
+  }
+  &.short-input-fill {
+    & input{
+      @include ss(()(bgc rgba($blue, .2)));
+    }
+  }
+  &:hover {
+    & .ant-input:not(.ant-input-disabled) {
+      @include ss((bdc $blue) ());
+    }
+  }
+  & .ant-input:focus {
+    @include ss((bdc $blue) ());
+    box-shadow: 0 0 0 2px rgba($blue,.2);
+  }
+}
+
+.short-input-success{
+  & input{
+    @include ss((bd $green)(c $green));
+  }
+  &.short-input-fill {
+    & input{
+      @include ss(()(bgc rgba($green, .2)));
+    }
+  }
+  &:hover {
+    & .ant-input:not(.ant-input-disabled) {
+      @include ss((bdc $green) ());
+    }
+  }
+  & .ant-input:focus {
+    @include ss((bdc $green) ());
+    box-shadow: 0 0 0 2px rgba($green,.2);
+  }
+}
+.short-input-warning{
+  & input{
+    @include ss((bd $yellow)(c $yellow));
+  }
+  &.short-input-fill {
+    & input{
+      @include ss(()(bgc rgba($yellow, .2)));
+    }
+  }
+  &:hover {
+    & .ant-input:not(.ant-input-disabled) {
+      @include ss((bdc $yellow) ());
+    }
+  }
+  & .ant-input:focus {
+    @include ss((bdc $yellow) ());
+    box-shadow: 0 0 0 2px rgba($yellow,.2);
+  }
+}
+
+.short-input-danger{
+  & input{
+    @include ss((bd $red)(c $red));
+  }
+  &.short-input-fill {
+    & input{
+      @include ss(()(bgc rgba($red, .2)));
+    }
+  }
+  &:hover {
+    & .ant-input:not(.ant-input-disabled) {
+      @include ss((bdc $red) ());
+    }
+  }
+  & .ant-input:focus {
+    @include ss((bdc $red) ());
+    box-shadow: 0 0 0 2px rgba($red,.2);
+  }
+}
+.short-input-gray{
+  & input{
+    @include ss((bd $gray-500)(c $gray-700));
+  }
+  &.short-input-fill {
+    & input{
+      @include ss(()(bgc rgba($gray-700, .2)));
+    }
+  }
+  &:hover {
+    & .ant-input:not(.ant-input-disabled) {
+      @include ss((bdc $gray-700) ());
+    }
+  }
+  & .ant-input:focus {
+    @include ss((bdc $gray-700) ());
+    box-shadow: 0 0 0 2px rgba($gray-700,.2);
+  }
+}
+
+.short-input-dark{
+  & input{
+    @include ss((bd $gray-900)(c $gray-900));
+  }
+  &.short-input-fill {
+    & input{
+      @include ss((c $gray-100)(bgc rgba($gray-900, 1)));
+    }
+  }
+  &:hover {
+    & .ant-input:not(.ant-input-disabled) {
+      @include ss((bdc $gray-900) ());
+    }
+  }
+  & .ant-input:focus {
+    @include ss((bdc $gray-900) ());
+    box-shadow: 0 0 0 2px rgba($gray-900,.2);
+  }
+}

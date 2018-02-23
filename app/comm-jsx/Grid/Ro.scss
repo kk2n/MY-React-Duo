@@ -1,0 +1,14 @@
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+//row样式修改
+.short-row {
+  &:after {
+    @include ss((con '') (db) (cb));
+  }
+  & .short-col {
+    float: left;
+  }
+}

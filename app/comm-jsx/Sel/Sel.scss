@@ -1,0 +1,122 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+
+
+//下来框样式修改s
+.short-dropdown {
+  @include ss((por) (di));
+  &:after {
+    @include ss((con '') (db) (cb));
+  }
+}
+
+.short-sel {
+  @include ss((tal) (bdrs 0) (bd) (c $gray-900)(zxw 10rem));
+  &.btn{
+    @include ss(() (bd)(tal)(bdrs 0));
+    vertical-align: inherit;
+    white-space:inherit;
+    
+  }
+  &:focus {
+    @include ss(() (bd $blue));
+    box-shadow: 0 0 0 3px rgba($gray-500, .25);
+  }
+  &:after {
+    @include ss((ml 0.7rem) (fr) (mt 0.5rem));
+  }
+}
+
+.short-sel-menu {
+  @include ss((w 100%) (mt -1) (bdrs 0) (p 0) (lh 2)(zdh 20rem)(o auto));
+  &.dropdown-menu {
+    @include ss((p 0) (bdrs 0));
+  }
+  & .dropdown-item {
+    @include ss((p .25rem 1.5rem .25rem 0.725rem) (bdb #f5f5f5));
+    &:last-child {
+      @include ss(() (bdb 0));
+    }
+    &:hover {
+      @include ss(() (p .25rem 1.5rem .25rem 0.925rem));
+    }
+    &.selected {
+      background: #F7F7F7 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTAgOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgOSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRDlEOUQ4IiBkPSJNNCw2LjdDMy42LDYuMywzLjUsNi4xLDMuMSw1LjdDMi42LDUuMiwyLDQuNiwxLjUsNC4xYy0wLjgtMC44LTIsMC40LTEuMiwxLjJjMC45LDAuOSwxLjksMS45LDIuOCwyLjgNCgkJYzAuNywwLjcsMS4zLDEsMiwwQzYuNyw2LDguMywzLjcsOS44LDEuNUMxMC41LDAuNSw5LTAuMyw4LjMsMC42bDAsMEM2LjcsMi45LDUuNyw0LjQsNCw2LjciLz4NCjwvZz4NCjwvc3ZnPg0K) no-repeat 94% center;
+      @include ss(() (bgs auto 25%));
+    }
+    &:focus {
+      @include ss((bgc $gray-200) ());
+    }
+    &:active {
+      @include ss((c $gray-900) ());
+    }
+  }
+}
+
+.sel-primary {
+  & .short-sel {
+    @include ss((bd $blue) (c $blue));
+    &:focus {
+      @include ss(() (bd $blue));
+      box-shadow: 0 0 0 3px rgba($blue, .25);
+    }
+  }
+}
+
+//a
+.sel-success {
+  & .short-sel {
+    @include ss((bd $green) (c $green));
+    &:focus {
+      @include ss(() (bd $green));
+      box-shadow: 0 0 0 3px rgba($green, .15);
+    }
+  }
+}
+
+.sel-danger {
+  & .short-sel {
+    @include ss((bd $red) (c $red));
+    &:focus {
+      @include ss(() (bd $red));
+      box-shadow: 0 0 0 3px rgba($red, .15);
+    }
+  }
+}
+
+.sel-gray {
+  & .short-sel {
+    @include ss((bd $gray-400) (c $gray-400));
+    &:focus {
+      @include ss(() (bd $gray-400));
+      box-shadow: 0 0 0 3px rgba($gray-400, .15);
+    }
+  }
+}
+
+.sel-dark {
+  & .short-sel {
+    @include ss((bd $gray-600) (c $gray-800));
+    &:focus {
+      @include ss(() (bd $gray-800));
+      box-shadow: 0 0 0 3px rgba($gray-800, .15);
+    }
+  }
+}
+
+.sel-disabled {
+  cursor: text;
+  & .short-sel {
+    @include ss((bd $gray-300) (c $gray-300));
+    cursor: not-allowed;
+    &:focus {
+      @include ss(() (bd $gray-300));
+      box-shadow: 0 0 0 3px rgba($gray-300, .15);
+    }
+  }
+}

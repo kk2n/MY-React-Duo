@@ -1,0 +1,80 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+//alert样式修改
+.short-alert {
+  @include ss(() (bdrs 0)(p 1.25rem 1.75rem  1.25rem 1rem));
+  & .close {
+    @include ss(() (poa)(r p2r(10)));
+  }
+}
+
+.alert-primary {
+  background-color: #f0f7ff;
+  border: #b8d6ff 1px solid;
+  & .close {
+    color: #0d86ff;
+  }
+}
+
+.alert-success {
+  background-color: #f1fff4;
+  border: #009125 1px solid;
+  & .close {
+    color: #009125;
+  }
+}
+
+.alert-warning {
+  background-color: #FFFFF7;
+  border: #ffc314 1px solid;
+  & .close {
+    color: #ffc314;
+  }
+}
+
+.alert-danger {
+  background-color: #f9f1f2;
+  border: #fc453b 1px solid;
+  & .close {
+    color: #fc453b;
+  }
+}
+
+.alert-info {
+  border-color: #00a7a8;
+  background-color: #F2FCFC;
+  & .close {
+    color: #00a7a8;
+  }
+}
+
+.alert-gray {
+  border-color: $gray-600;
+  background-color: $gray-200;
+  & .close {
+    color: $gray-600;
+  }
+}
+
+.alert-dark {
+  @include ss((bgc $gray-700) (bd $gray-900)(c $gray-100));
+  & .close {
+    color: $gray-100;
+  }
+}
+.alert-sm {
+  @include ss((fz 80%)(p .5rem 1.75rem  0.5rem 0.5rem));
+  & .close {
+    @include ss(() (lh 0.75));;
+  }
+}
+.alert-lg {
+  @include ss((fz 120%)(p 1.75rem 2.35rem  1.75rem 1.75rem));
+  & .close {
+    @include ss(() (lh 1.5rem)(r 1.2rem));;
+  }
+}

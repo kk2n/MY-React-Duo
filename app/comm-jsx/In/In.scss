@@ -1,0 +1,174 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+//input组件
+.short-input {
+  @include ss((wh auto) (lh 1.25) (p .5rem .75rem) (bd #ddd));
+  outline: none;
+  &.short-input-sm {
+    @include ss((fz 80%) (h p2r(25)) (p 0 p2r(4)));
+  }
+  &.short-input-lg {
+    @include ss((h p2r(42)) (p 6 10)(fz 120%));
+  }
+  &.short-input-disabled {
+    @include ss((bd #f0f0f0) (c rgba(0, 0, 0, .25)) (bgc #f7f7f7) (op 1));
+    cursor: not-allowed;
+    &:hover {
+      @include ss((bd #f0f0f0) ());
+    }
+  }
+  &:hover {
+    @include ss((bd $blue) ());
+  }
+}
+
+.short-input-group-wrapper {
+  @include ss(() (di) (w 100%));
+  vertical-align: top;
+}
+.short-input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+.short-input-group-addon {
+  padding: 4px 7px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  width: 1px;
+  white-space: nowrap;
+  vertical-align: middle;
+  display: table-cell;
+  &:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: 0;
+  }
+}
+.short-hasaddon{
+  &>input{
+    @include ss(() (w 100%));
+  }
+}
+.short-input-prefix{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+  line-height: 0;
+  color: rgba(0,0,0,.65);
+  left: 7px;
+}
+.short-input-affix-wrapper{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  & .short-input:not(:first-child) {
+    padding-left: 24px;
+  }
+  & .short-input:first-child {
+    padding-right: 24px;
+    width: 100%;
+  }
+}
+.short-input-suffix{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+  line-height: 0;
+  color: rgba(0,0,0,.65);
+  right: 7px;
+}
+.short-input-primary{
+  @include ss((bd $blue)(c $blue));
+  &.short-input-fill {
+    @include ss((c $blue) (bgc rgba($blue, .2)));
+    &:hover {
+      @include ss((bgc rgba($blue, .3)) (bd $blue));
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($blue, .2);
+  }
+}
+.short-input-success{
+  @include ss((bd $green)(c $green));
+  &.short-input-fill {
+    @include ss((c $green) (bgc rgba($green, .2)));
+    &:hover {
+      @include ss((bgc rgba($green, .3)) (bd $green));
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($green, .2);
+    outline: none;
+  }
+}
+.short-input-warning{
+  @include ss((bd $yellow)(c $yellow));
+  &.short-input-fill {
+    @include ss((c $yellow) (bgc rgba($yellow, .2)));
+    &:hover {
+      @include ss((bgc rgba($yellow, .3)) (bd $yellow));
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($yellow, .2);
+    outline: none;
+  }
+}
+.short-input-danger{
+  @include ss((bd $red)(c $red));
+  &.short-input-fill {
+    @include ss((c $red) (bgc rgba($red, .2)));
+    &:hover {
+      @include ss((bgc rgba($red, .3)) (bd $red));
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($red, .2);
+    outline: none;
+  }
+}
+.short-input-gray{
+  @include ss((bd $gray-500)(c $gray-700));
+  &.short-input-fill {
+    @include ss(() (bgc $gray-400));
+    &:hover {
+      @include ss((bgc $gray-400) (bd $gray-600));
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($gray-500, .2);
+    outline: none;
+  }
+}
+.short-input-dark{
+  @include ss((bd $gray-900)(c $gray-100));
+  &.short-input-fill {
+    @include ss(() (bgc $gray-900));
+    &:hover {
+      @include ss((bgc $gray-900) (bd $gray-900));
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($gray-900, .2);
+    outline: none;
+  }
+}

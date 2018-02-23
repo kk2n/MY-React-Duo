@@ -1,0 +1,46 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+
+
+//下来框样式修改s
+.short-pg{
+  & li {
+    @include ss((bdrs 0) (mr -1)(h p2r(34)));
+  }
+  & .page-link {
+    @include ss((c #555)(p 0.5rem 1rem));
+  }
+  & .page-item {
+    &.disabled {
+      cursor: not-allowed;
+      & .page-link {
+        @include ss(() (c #ddd));
+      }
+    }
+    &:first-child {
+      & .page-link {
+        @include ss(() (bdrs 0));
+      }
+    }
+    &:last-child {
+      & .page-link {
+        @include ss(() (bdrs 0));
+      }
+    }
+  }
+  &.pagination-lg {
+    & .page-link {
+      @include ss(()(p 0.5rem 1.5rem));
+    }
+  }
+  &.pagination-sm {
+    & .page-link {
+      @include ss(()(p 0.28rem 0.86rem));
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            padding: 40px;
+            text-align: center;
+        }
+        a{
+            width: 25%;
+            display: inline;
+            border-radius:6px;
+            margin: 0 20px;
+            padding: 8px 10px;
+            line-height: 36px;
+        }
+        a:hover{
+            background-color: #fff;
+            box-shadow: 0 1px 2px #ddd;
+        }
+    </style>
+</head>
+<body>
+
+>> 页面列表 <<<br><br>
+
+
+<a>chengji/p1.html</a>
+<a>page/p.html</a>
+
+<script>
+    //window.location.href='chengji/p1.html'
+
+    let tag = document.getElementsByTagName('a');
+    for(var i=0;i<tag.length;i++){
+        tag[i].setAttribute('href',tag[i].innerText);
+    }
+</script>
+</body>
+</html>

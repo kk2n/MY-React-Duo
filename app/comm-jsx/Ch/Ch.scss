@@ -1,0 +1,448 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+//input组件
+.short-label{
+  @include ss((p 0 0 0 1.75rem ) (por)(mb 0)(cup));
+  & label {
+    @include ss((mb 0) ());
+  }
+  & .check-txt {
+    @include ss(() (pr 0.5rem));
+  }
+  & .short-check {
+    @include ss(() (dn));
+    & + label{
+      @include ss((bgc #fff)(bd #ddd)(p 0.5rem)(bdrs 0)(di)(poa)(l 0.285rem)(t 0.14rem)(cup));
+      -webkit-appearance: none;
+    }
+    &.check-fill {
+      & + label{
+        @include ss((bgc lighten($blue,100%))(bd lighten($blue,0%)));
+      }
+      &:checked {
+        & + label {
+          @include ss((bgc lighten($blue,0%))(bd lighten($blue,0%)));
+          &:after{
+            @include ss(()(c lighten($blue,100%)));
+          }
+
+        }
+      }
+    }
+    &:checked {
+      & + label {
+        @include ss(()(bd lighten($blue,20%)));
+        &:after{
+          @include ss((con '\2714')(fz 14)(lh 1)(poa)(t 0)(l 0.07rem)(c $blue));
+        }
+
+      }
+    }
+    //blue
+    &.check-primary {
+      & + label{
+        @include ss((bgc lighten($blue,55%))(bd $blue));
+      }
+      &:checked {
+        & + label {
+          @include ss(()(bd lighten($blue,20%)));
+          &:after{
+            @include ss(()(c lighten($blue,0%)));
+          }
+
+        }
+      }
+      &.check-fill {
+        & + label{
+          @include ss((bgc lighten($blue,0%))(bd lighten($blue,0%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($blue,0%)));
+            &:after{
+              @include ss(()(c lighten($blue,100%)));
+            }
+
+          }
+        }
+      }
+    }
+    //green
+    &.check-success {
+      & + label{
+        @include ss((bgc lighten($green,55%))(bd $green));
+      }
+      &:checked {
+        & + label {
+          @include ss(()(bd lighten($green,20%)));
+          &:after{
+            @include ss(()(c lighten($green,0%)));
+          }
+
+        }
+      }
+      &.check-fill {
+        & + label{
+          @include ss((bgc lighten($green,0%))(bd lighten($green,0%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($green,0%)));
+            &:after{
+              @include ss(()(c lighten($green,100%)));
+            }
+
+          }
+        }
+      }
+    }
+    //RED
+    &.check-danger {
+      & + label{
+        @include ss((bgc lighten($red,43%))(bd $red));
+      }
+      &:checked {
+        & + label {
+          @include ss(()(bd lighten($red,20%)));
+          &:after{
+            @include ss(()(c lighten($red,0%)));
+          }
+
+        }
+      }
+      &.check-fill {
+        & + label{
+          @include ss((bgc lighten($red,0%))(bd lighten($red,0%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($red,0%)));
+            &:after{
+              @include ss(()(c lighten($red,100%)));
+            }
+
+          }
+        }
+      }
+    }
+    //yellow
+    &.check-warning {
+      & + label{
+        @include ss((bgc lighten($yellow,45%))(bd $yellow));
+      }
+      &:checked {
+        & + label {
+          @include ss(()(bd lighten($yellow,20%)));
+          &:after{
+            @include ss(()(c lighten($yellow,0%)));
+          }
+
+        }
+      }
+      &.check-fill {
+        & + label{
+          @include ss((bgc lighten($yellow,0%))(bd lighten($yellow,0%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($yellow,0%)));
+            &:after{
+              @include ss(()(c lighten($yellow,100%)));
+            }
+
+          }
+        }
+      }
+    }
+    //gray
+    &.check-gray {
+      & + label{
+        @include ss((bgc lighten($gray-600,50%))(bd $gray-600));
+      }
+      &:checked {
+        & + label {
+          @include ss(()(bd lighten($gray-600,20%)));
+          &:after{
+            @include ss(()(c lighten($gray-600,0%)));
+          }
+
+        }
+      }
+      &.check-fill {
+        & + label{
+          @include ss((bgc lighten($gray-600,0%))(bd lighten($gray-600,0%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($gray-600,0%)));
+            &:after{
+              @include ss(()(c lighten($gray-600,100%)));
+            }
+
+          }
+        }
+      }
+    }
+    //check-dark
+    &.check-dark {
+      & + label{
+        @include ss((bgc lighten($gray-600,55%))(bd $gray-900));
+      }
+      &:checked {
+        & + label {
+          @include ss(()(bd lighten($gray-900,20%)));
+          &:after{
+            @include ss(()(c lighten($gray-900,0%)));
+          }
+
+        }
+      }
+      &.check-fill {
+        & + label{
+          @include ss((bgc lighten($gray-900,0%))(bd lighten($gray-900,0%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($gray-900,0%)));
+            &:after{
+              @include ss(()(c lighten($gray-900,100%)));
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+
+  &:hover {
+    & .short-check {
+      & + label{
+        @include ss(() (bd lighten($blue,10%)));
+      }
+      &.check-fill {
+        & + label{
+          @include ss((bgc lighten($blue,0%))(bd lighten($blue,0%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($blue,0%)));
+            &:after{
+              @include ss(()(c lighten($blue,100%)));
+            }
+
+          }
+        }
+      }
+      //green
+      &.check-primary {
+        & + label{
+          @include ss(()(bd lighten($blue,20%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($blue,20%)));
+            &:after{
+              @include ss(()(c lighten($blue,0%)));
+            }
+          }
+        }
+        &.check-fill {
+          & + label{
+            @include ss(()(bd lighten($blue,0%)));
+          }
+          &:checked {
+            & + label {
+              @include ss(()(bd lighten($blue,0%)));
+              &:after{
+                @include ss(()(c lighten($blue,100%)));
+              }
+
+            }
+          }
+        }
+      }
+      //green
+      &.check-success {
+        & + label{
+          @include ss((bgc lighten($green,100%))(bd lighten($green,20%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($green,20%)));
+            &:after{
+              @include ss(()(c lighten($green,0%)));
+            }
+          }
+        }
+        &.check-fill {
+          & + label{
+            @include ss((bgc lighten($green,0%))(bd lighten($green,0%)));
+          }
+          &:checked {
+            & + label {
+              @include ss(()(bd lighten($green,0%)));
+              &:after{
+                @include ss(()(c lighten($green,100%)));
+              }
+
+            }
+          }
+        }
+      }
+      //red
+      &.check-danger {
+        & + label{
+          @include ss((bgc lighten($red,100%))(bd lighten($red,20%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($red,20%)));
+            &:after{
+              @include ss(()(c lighten($red,0%)));
+            }
+
+          }
+        }
+        &.check-fill {
+          & + label{
+            @include ss((bgc lighten($red,0%))(bd lighten($red,0%)));
+          }
+          &:checked {
+            & + label {
+              @include ss(()(bd lighten($red,0%)));
+              &:after{
+                @include ss(()(c lighten($red,100%)));
+              }
+
+            }
+          }
+        }
+      }
+      //yellow
+      &.check-warning {
+        & + label{
+          @include ss((bgc lighten($yellow,100%))(bd lighten($yellow,20%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($yellow,20%)));
+            &:after{
+              @include ss(()(c lighten($yellow,0%)));
+            }
+
+          }
+        }
+        &.check-fill {
+          & + label{
+            @include ss((bgc lighten($yellow,0%))(bd lighten($yellow,0%)));
+          }
+          &:checked {
+            & + label {
+              @include ss(()(bd lighten($yellow,0%)));
+              &:after{
+                @include ss(()(c lighten($yellow,100%)));
+              }
+
+            }
+          }
+        }
+      }
+      //$gray-600
+      &.check-gray {
+        & + label{
+          @include ss((bgc lighten($gray-600,100%))(bd lighten($gray-600,20%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($gray-600,20%)));
+            &:after{
+              @include ss(()(c lighten($gray-600,0%)));
+            }
+
+          }
+        }
+        &.check-fill {
+          & + label{
+            @include ss((bgc lighten($gray-600,0%))(bd lighten($gray-600,0%)));
+          }
+          &:checked {
+            & + label {
+              @include ss(()(bd lighten($gray-600,0%)));
+              &:after{
+                @include ss(()(c lighten($gray-600,100%)));
+              }
+
+            }
+          }
+        }
+      }
+      //$gray-900 dark
+      &.check-dark {
+        & + label{
+          @include ss((bgc lighten($gray-900,100%))(bd lighten($gray-900,0%)));
+        }
+        &:checked {
+          & + label {
+            @include ss(()(bd lighten($gray-900,0%)));
+            &:after{
+              @include ss(()(c lighten($gray-900,0%)));
+            }
+
+          }
+        }
+        &.check-fill {
+          & + label{
+            @include ss((bgc lighten($gray-900,0%))(bd lighten($gray-900,0%)));
+          }
+          &:checked {
+            & + label {
+              @include ss(()(bd lighten($gray-900,0%)));
+              &:after{
+                @include ss(()(c lighten($gray-900,100%)));
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+  &.disabled {
+    @include ss(() (op 0.2));
+    cursor: not-allowed;
+    & .short-check{
+      cursor: not-allowed;
+    }
+    &:hover{
+     & .short-check{
+       &.check-disabled{
+         & +label{
+           cursor: not-allowed;
+         }
+       }
+     }
+    }
+  }
+}
+.short-checks{
+  @include ss(() (mb 0));
+}
+
+.big-radio{
+  & + label{
+    @include ss(() (p 16));
+  }
+  &:checked{
+    & + label{
+      &:after{
+        @include ss(() (w 22)(h 22)(l 5)(t 5)(op 0.5));
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+$grid-columns: 24;
+$grid-gutter-width: 0;
+$grid-breakpoints: (
+  // Extra small screen / phone
+        xs: 0,
+  // Small screen / phone
+        sm: 576px,
+  // Medium screen / tablet
+        md: 768px,
+  // Large screen / desktop
+        lg: 992px,
+  // Extra large screen / wide desktop
+        xl: 1200px
+);
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+);
+@import "../comm-scss/short-sass/sscss-set";
+@import "../comm-scss/short-sass/sscss-mixin";
+@import "../comm-scss/bootstarp4/bootstrap";
+html {
+  font-size: $fz;
+}
+
+body {
+  font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
+}
+dd{margin-bottom: 0}
+.anim1 {
+  transition: All 0.1s ease-in-out;
+  -webkit-transition: All 0.1s ease-in-out;
+  -moz-transition: All 0.1s ease-in-out;
+  -o-transition: All 0.1s ease-in-out;
+}
+
+.anim3 {
+  transition: All 0.3s ease-in-out;
+  -webkit-transition: All 0.3s ease-in-out;
+  -moz-transition: All 0.3s ease-in-out;
+  -o-transition: All 0.3s ease-in-out;
+}
+
+
+

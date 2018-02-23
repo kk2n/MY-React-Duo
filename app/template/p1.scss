@@ -1,0 +1,19 @@
+@import "../comm-scss/short-sass/sscss-set";
+@import "../comm-scss/short-sass/sscss-mixin";
+$path:'/common/img/';
+.yy {
+  @include ss((w 100%) (bgc #fff)(bd 3 #f00)(m 1)(p 1 2 3 4)(who 12 19));
+  & tbody {
+    &>tr{
+      &>td {
+        @include ss((bdb)(p 0.5rem 0.75rem));
+      }
+      &:last-child {
+        &>td {
+          @include ss(()(bdb #E9ECEF));
+        }
+      }
+    }
+  }
+
+}

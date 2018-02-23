@@ -1,0 +1,47 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+@import "../../comm-scss/bootstarp4/functions";
+@import "../../comm-scss/bootstarp4/variables";
+@import "../../comm-scss/bootstarp4/mixins";
+
+
+
+//下来框样式修改s
+.short-pg{
+  & li {
+    @include ss((bdrs 0) (mr -1)(fz 14)(p 0 14)(h 34)(lh 33px));
+  }
+  & .rc-pagination-disabled {
+    @include ss((c #ddd) ());
+  }
+  & .rc-pagination-total-text {
+    @include ss(() (poa)(r 0)(fz 14)(mr 20));
+  }
+  & .rc-pagination-item {
+    outline: none;
+    &:hover {
+      @include ss((por) (z 10));
+      outline: none;
+    }
+  }
+  & .rc-pagination-jump-next,.rc-pagination-jump-prev{
+    &:focus {
+      outline: none;
+    }
+    &:hover{
+      &:after{
+        @include ss(() (p 0 5 0 4));
+      }
+    }
+  }
+  & .rc-pagination-item-active {
+    @include ss((c #fff) (por)(z 10));
+    &:focus {
+     outline: none;
+    }
+    & a {
+      outline: none;
+    }
+  }
+}

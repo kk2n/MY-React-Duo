@@ -1,0 +1,10 @@
+// BY likuan
+@import "../../comm-scss/short-sass/sscss-set";
+@import "../../comm-scss/short-sass/sscss-mixin";
+//alert样式修改
+.short-Space {
+  @include ss((who) (cb));
+  &::after {
+    @include ss((con '') (db) (cb)(lh 0)(fz 0));
+  }
+}
